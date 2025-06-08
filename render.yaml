@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: elden-ring-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python web.py
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: REDDIT_CLIENT_ID
+        sync: false
+      - key: REDDIT_CLIENT_SECRET
+        sync: false
+      - key: REDDIT_USER_AGENT
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
