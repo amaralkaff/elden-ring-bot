@@ -100,7 +100,7 @@ class LocalModelTrainer:
             warmup_steps=100,
             logging_steps=50,
             save_steps=500,
-            evaluation_strategy="no",
+            eval_strategy="no",  # Fixed: changed from evaluation_strategy
             save_total_limit=2,
             prediction_loss_only=True,
             remove_unused_columns=False,
