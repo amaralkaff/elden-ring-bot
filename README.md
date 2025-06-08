@@ -37,21 +37,6 @@ python web.py           # Start web interface
 python main.py          # Choose option 4 to train
 ```
 
-## 🎯 Features
-
-### Web Interface
-- Modern ChatGPT-style UI with dark theme
-- Chat history with local storage
-- Copy/paste functionality
-- Real-time Reddit data fetching
-- Multiple AI models
-
-### Local Training Option
-- Train custom models on Reddit data
-- Offline usage after training
-- PyTorch & Transformers support
-- Custom fine-tuning on Elden Ring content
-
 ## 📋 Commands
 
 ```bash
@@ -77,14 +62,6 @@ The project includes both approaches so you can:
 - **Fork & use API**: Quick setup for most users
 - **Fork & train locally**: Full control and offline usage
 - **Mix both**: Use API for quick responses, train for specific use cases
-
-## 🌐 Deploy for Free
-
-Ready-to-deploy to:
-- Render.com (render.yaml included)
-- Railway.app (railway.json included) 
-- Heroku (Procfile included)
-- Fly.io
 
 Just connect your GitHub repo to any platform!
 
