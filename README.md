@@ -1,7 +1,5 @@
 # Elden Ring Chat Bot
 
-# Elden Ring Chat Bot
-
 An AI-powered chatbot that provides answers to questions about Elden Ring using the latest data from multiple Reddit communities. The bot fetches information about game mechanics, builds, hacks, mods, and cheats from subreddits including r/Eldenring, r/EldenRingMods, r/cheatengine, and r/GuidedHacking.
 
 ## Quick Start
