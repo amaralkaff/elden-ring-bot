@@ -1,4 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+@.env
+venv/
+venv_new/
+env/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Data files
+data/
+cleaned_elden_ring_cheats_data.txt
+elden_ring_cheats_data.txt
+
+# Editor files
+.vscode/
+.idea/
+
+# Old files (to be removed)
+app.py
+run.py
+fullcode.py
+chatbot.py
+train_chatbot.py
+Capture.PNG
+
 **/.env
+**/@.env
 forumchatbot
 web app
 INzdg_TV7NM6bAcQU-sWRQ
