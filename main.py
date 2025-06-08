@@ -74,13 +74,19 @@ def main():
     else:
         # No command specified, show menu
         while True:
-            print("\n=== Elden Ring Cheats Bot ===")
+            print("\n" + "="*50)
+            print("🎮 ELDEN RING CHAT BOT")
+            print("="*50)
             print("1. Fetch data from Reddit")
-            print("2. Start chatbot with Groq API")
+            print("2. Start chatbot with Groq API (Recommended)")
             print("3. Start chatbot in local-only mode")
-            print("4. Exit")
+            print("4. Train local model from Reddit data")
+            print("5. Start local trained chatbot")
+            print("6. Start web interface")
+            print("7. Exit")
+            print("="*50)
             
-            choice = input("\nEnter your choice (1-4): ")
+            choice = input("\nEnter your choice (1-7): ")
             
             if choice == "1":
                 # Create args object with default values
@@ -100,10 +106,39 @@ def main():
                     model = None
                 run_chatbot(Args())
             elif choice == "4":
-                print("Exiting...")
+                print("\n=== Training Local Model ===")
+                try:
+                    from train_local_model import main as train_main
+                    train_main()
+                except ImportError:
+                    print("❌ Training dependencies not available.")
+                    print("Make sure transformers, torch, and datasets are installed.")
+                except Exception as e:
+                    print(f"❌ Training error: {e}")
+                input("\nPress Enter to continue...")
+            elif choice == "5":
+                print("\n=== Starting Local Trained Chatbot ===")
+                try:
+                    from local_chatbot import main as local_main
+                    local_main()
+                except ImportError:
+                    print("❌ Local model dependencies not available.")
+                except Exception as e:
+                    print(f"❌ Error: {e}")
+            elif choice == "6":
+                print("\n=== Starting Web Interface ===")
+                print("🌐 Starting web server at http://localhost:8000")
+                try:
+                    from web import app
+                    port = int(os.environ.get('PORT', 8000))
+                    app.run(debug=True, host='0.0.0.0', port=port)
+                except Exception as e:
+                    print(f"❌ Web server error: {e}")
+            elif choice == "7":
+                print("👋 Goodbye!")
                 break
             else:
-                print("Invalid choice. Please enter a number between 1 and 4.")
+                print("❌ Invalid choice. Please enter a number between 1-7.")
 
 if __name__ == "__main__":
     main()
